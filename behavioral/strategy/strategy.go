@@ -25,11 +25,7 @@ func (Multiplication) Apply(left, right int) int {
 	return left * right
 }
 
-// 需要一个统一的
-func Operate(left, right int, operator Operator) int {
-	return operator.Apply(left, right)
-}
-
+// 需要一个统一的对象接收接口，这样可以动态改变接口而不用改方法签名
 type Operation struct {
 	optr Operator
 }
